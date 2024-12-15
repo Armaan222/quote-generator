@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+   height: 100%;
+   /* background-color: #242424; */
+   color: rgb(1, 158, 172);
+   font-size: 1.1rem;
+   font-style: italic;
+   line-height: 1.2;
+   background-image: url('./components/images/ac6dc4fe1925ca65a92fb0bc88cfe6ba.gif');
+   
+   background-size: cover; /* Ensures the GIF covers the entire container */
+   background-position: center; /* Centers the GIF */
+   background-repeat: no-repeat; /* Prevents the GIF from repeating */
+   height: 100vh; /* Full height of the viewport */
+   width: 100%; /* Full width */
+   display: flex; /* Optional: For aligning content */
+   justify-content: center; /* Center content horizontally */
+   align-items: center;
+   
+}
+
+/* Quote Container Animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+  
+  .quote-container {
+    /* text-align: center;
+    max-width: 500px;
+    padding: 20px; */
+    /* background-color: white; */
+    box-shadow: 0 0px 9px rgb(255, 250, 250); 
+     border-radius: 20px;
+    
+  }
+  
+
+
+.quote-button {
+    position: fixed;
+    height: 8vh; /* Full height of the viewport */
+    width: 100%; /* Full width */
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    
+    bottom: 75px;
+    right: 0.5%;
+    padding: 5px 1px;
+    font-size: 1rem;
+    background-color: #000000;
+    color: aliceblue;
+    border-color: rgb(222, 201, 9);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+    
+  }
+
+  .quote-button:hover {
+    border-color: rgb(84, 153, 15);
+  }
+
+  @media (max-width: 700px) {
+    .quote-display {
+        max-width: 90%;
+    }
+
+    .qoute-text {
+        font-size: 1.25rem;
+    }
+    .quote-author {
+        font-size: 1rem;
+    }
+    .quote-button {
+        width: 100%;
+        padding: 9px;
+       
+    }
+  }
+
+@media (max-width: 480px) {
+    .qoute-text {
+        font-size: 1.9rem;
+    }
+    .quote-button {
+        padding: 8px;
+        align-content: flex-end;
+    }
+}
+
+
+
+
